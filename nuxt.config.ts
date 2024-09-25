@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: {enabled: true},
-    modules: ['@nuxt/image', '@nuxt/image-edge'],
+    //modules: ['@nuxt/image', '@nuxt/image-edge'],
+    modules: ['@nuxt/image'],
     css: ['~/assets/css/6623B3A69192691B9.css',
         '~/assets/css/get.css',
         '~/assets/css/style.min.css',
@@ -28,23 +29,20 @@ export default defineNuxtConfig({
                 {name: 'description', content: 'home'}
             ],
             script: [
-                {src: '/js/ebOneTag.js', mode: 'client'},
-                {src: '/js/gtm.js', mode: 'client'},
                 {src: '/js/underscore.min.js', mode: 'client', body: true},
                 {src: '/js/jquery.min.js', mode: 'client', body: true},
                 {src: '/js/jquery-migrate.min.js', mode: 'client', body: true},
-                {src: '/js/daves-wordpress-live-search.min.js', mode: 'client', body: true},
                 {src: '/js/excanvas.compiled.js', mode: 'client', body: true},
                 {src: '/js/spinners.min.js', mode: 'client', body: true},
                 {src: '/js/wp-sentry-browser.min.js', mode: 'client', body: true},
                 {src: '/js/image-map-pro.min.js', mode: 'client', body: true},
                 {src: '/js/preloader.js', mode: 'client', body: true},
-                {src: '/js/main.js', mode: 'client', body: true},
+                {src: '/js/main.js', mode: 'client', body: true, async: true},
 
                 {
                     innerHTML: `
                       window.addEventListener('load', function() {
-            document.body.classList.add("loading");
+            document.body.classList.add("loading");            
     setTimeout(function () {
         document.body.classList.remove("loading");
     }, 100);
