@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: {enabled: true},
+    override: true,
     //modules: ['@nuxt/image', '@nuxt/image-edge'],
     modules: ['@nuxt/image'],
     css: ['~/assets/css/6623B3A69192691B9.css',
