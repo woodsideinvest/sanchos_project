@@ -6,11 +6,11 @@ services:
       dockerfile: Dockerfile
     container_name: santos
     restart: always
-    deploy:
-      resources:
-        limits:
-          cpus: '0.3'
-          memory: 128M
+      # deploy:
+      # resources:
+      #limits:
+      #cpus: '0.3'
+    #memory: 128M
     networks:
       - api_santos_network
     ports:
