@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   voyage-two:
     build:
@@ -10,7 +11,11 @@ services:
       - api_santos_network
     ports:
       - "3000:3000"
-
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=production
 
 networks:
   api_santos_network:
