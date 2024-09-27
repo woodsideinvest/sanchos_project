@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     //modules: ['@nuxt/image', '@nuxt/image-edge'],
     modules: ['@nuxt/image'],
     css: ['~/assets/css/6623B3A69192691B9.css',
+        '~/node_modules/flickity/dist/flickity.min.css',
         '~/assets/css/get.css',
         '~/assets/css/style.min.css',
         '~/assets/css/image-map-pro.min.css',
@@ -25,7 +26,7 @@ export default defineNuxtConfig({
     },
     app: {
         head: {
-            title: 'Home',
+            title: 'A Global Energy Pioneer',
             meta: [
                 {name: 'description', content: 'home'}
             ],

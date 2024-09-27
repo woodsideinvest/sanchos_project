@@ -7,11 +7,13 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "start": "nuxt start"
   },
   "dependencies": {
     "@nuxt/image": "^1.8.0",
     "@nuxt/image-edge": "^1.3.0-28493895.369b747",
+    "flickity": "^3.0.0",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vue-router": "latest"
