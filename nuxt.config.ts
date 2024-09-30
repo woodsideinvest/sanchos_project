@@ -3,6 +3,7 @@ export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: {enabled: true},
     override: true,
+    pages: true,
     //modules: ['@nuxt/image', '@nuxt/image-edge'],
     modules: ['@nuxt/image'],
     css: ['~/assets/css/6623B3A69192691B9.css',
@@ -76,11 +77,20 @@ export default defineNuxtConfig({
                 },
 
             ],
-        },
+        }
     },
     devServer: {
         host: '0.0.0.0',
         port: 3000
     },
-    routeRules: {},
+    routeRules: {
+        '/': {cache: {maxAge: 60, swr: true}},
+    },
+    devtools: {enabled: true},
+    postcss: {
+        plugins: {
+            tailwindcss: {},
+            autoprefixer: {},
+        },
+    },
 })

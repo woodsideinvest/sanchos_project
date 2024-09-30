@@ -1,0 +1,1 @@
+export default defineNuxtRouteMiddleware((to) => {    if (!to.matched.length) {        return {name: '404'}  // или другой маршрут, если его нужно явно указать    }})
