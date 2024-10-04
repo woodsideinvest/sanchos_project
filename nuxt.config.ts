@@ -1,29 +1,24 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
-    devtools: {enabled: true},
+    //devtools: {enabled: false},
     override: true,
     pages: true,
     //modules: ['@nuxt/image', '@nuxt/image-edge'],
     modules: ['@nuxt/image'],
-    css: ['~/assets/css/6623B3A69192691B9.css',
-        '~/node_modules/flickity/dist/flickity.min.css',
+    css: [
+        '~/assets/css/6623B3A69192691B9.css',
         '~/assets/css/get.css',
         '~/assets/css/style.min.css',
         '~/assets/css/image-map-pro.min.css',
         '~/assets/css/share-buttons.css',
         '~/assets/css/default.css',
         '~/assets/css/tablepress-responsive.min.css',
-        '~/assets/css/main.css'],
+        '~/assets/css/main.css'
+    ],
     image: {
         inject: true,
         provider: 'ipx',
         dir: 'public/images',
-    },
-    vite: {
-        define: {
-            'process.env.DEBUG': true,
-        },
     },
     app: {
         head: {
@@ -75,7 +70,6 @@ export default defineNuxtConfig({
         `,
                     type: 'text/javascript'
                 },
-
             ],
         }
     },
@@ -86,11 +80,6 @@ export default defineNuxtConfig({
     routeRules: {
         '/': {cache: {maxAge: 60, swr: true}},
     },
-    devtools: {enabled: true},
     postcss: {
-        plugins: {
-            tailwindcss: {},
-            autoprefixer: {},
-        },
     },
 })
