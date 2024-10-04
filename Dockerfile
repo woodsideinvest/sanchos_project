@@ -1,13 +1,27 @@
+# Використовуємо останню версію Node.js
 FROM node:latest as build
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
 
+# Вказуємо робочу директорію
+WORKDIR /app
+
+# Копіюємо файли package.json і package-lock.json
+COPY package*.json ./
+
+# Копіюємо скрипт установки
+COPY setup.sh ./
+
+# Додаємо права на виконання для скрипту
+RUN chmod +x setup.sh
+
+# Виконуємо скрипт для установки залежностей і збору проекту
+#RUN ./setup.sh
+
+# Копіюємо всі файли проекту
 COPY ./ .
 
-RUN npm run generate
-
+# Встановлюємо середовище для запуску
 ENV HOST 0.0.0.0
 EXPOSE 3030
 
-CMD [ "yarn", "start" ]
+# Запускаємо додаток
+CMD ["yarn", "start"]

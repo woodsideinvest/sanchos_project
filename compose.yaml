@@ -14,8 +14,11 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+      - /app/.output
+      - /app/.nuxt
     environment:
       - NODE_ENV=production
+    command: /bin/sh -c "chmod +x ./setup.sh && ./setup.sh && yarn start"
 
 networks:
   api_santos_network:
