@@ -81,9 +81,5 @@ export default defineNuxtConfig({
         '/': {cache: {maxAge: 60, swr: true}},
     },
     postcss: {
-        plugins: {
-            tailwindcss: {},
-            autoprefixer: {},
-        },
     },
 })
